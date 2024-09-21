@@ -1,0 +1,24 @@
+h1{
+    color:#2c0b88 ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.tambah input[type=text]{
+    width: 35%;
+    color:white;
+    padding: 6px 7px;
+    border-radius: 10px;
+    margin-left: 32%;
+    border: none;
+    background-color: #8765e4;
+    cursor: pointer;
+}
+.tambah input[type=submit]{
+    color:white;
+    padding: 6px 7px;
+    border-radius: 10px;
+    margin-left: 32%;
+    border: none;
+    background-color: #7549ee;
+    cursor: pointer;
+}
