@@ -30,7 +30,7 @@
         <option value="">--pilih alamt--</option>
 
         <?php foreach($alamat as $al) : ?>
-            <?php if($al == $edit['alamat']): ?>
+            <?php if($al == $edit['id_alamat']): ?>
                 <option value="<?= $al; ?>" selected><?= $al; ?></option>
                 <?php else : ?>
                 <option value="<?= $al; ?>"><?= $al; ?></option>
