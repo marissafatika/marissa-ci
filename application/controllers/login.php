@@ -19,8 +19,9 @@ class Login extends CI_Controller {
 
 		#proses ferivikasi	
 		/*['password']= harus sama dengan database */
+		#
 		if ($user){
-			if($password == $user['password']){
+			if(password_verify($password,$user['password'])){
 				$data =[
 					'username' => $user['username']
 				];
