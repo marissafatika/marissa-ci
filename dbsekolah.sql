@@ -20,13 +20,46 @@ DROP DATABASE IF EXISTS `sekolah`;
 CREATE DATABASE IF NOT EXISTS `sekolah` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `sekolah`;
 
+-- Dumping structure for table sekolah.alamat
+DROP TABLE IF EXISTS `alamat`;
+CREATE TABLE IF NOT EXISTS `alamat` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `alamat` varchar(256) DEFAULT NULL,
+  `kode_pos` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Dumping data for table sekolah.alamat: ~3 rows (approximately)
+DELETE FROM `alamat`;
+INSERT INTO `alamat` (`id`, `alamat`, `kode_pos`) VALUES
+	(1, 'batang', '51252'),
+	(2, 'pekalongan', '51118'),
+	(3, 'pemalang', '5512');
+
+-- Dumping structure for table sekolah.siswa
+DROP TABLE IF EXISTS `siswa`;
+CREATE TABLE IF NOT EXISTS `siswa` (
+  `nis` int NOT NULL AUTO_INCREMENT,
+  `nama` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `id_alamat` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `no_telp` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`nis`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Dumping data for table sekolah.siswa: ~2 rows (approximately)
+DELETE FROM `siswa`;
+INSERT INTO `siswa` (`nis`, `nama`, `id_alamat`, `no_telp`) VALUES
+	(1, 'marissa', 'pekalongan', '085701719453'),
+	(3, 'iin', 'batang', '123');
+
 -- Dumping structure for table sekolah.user
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
-  `username` int NOT NULL AUTO_INCREMENT,
-  `password` int DEFAULT NULL,
-  `nama` int DEFAULT NULL,
-  PRIMARY KEY (`username`)
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(256) DEFAULT NULL,
+  `password` varchar(256) DEFAULT NULL,
+  `nama` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table sekolah.user: ~0 rows (approximately)
