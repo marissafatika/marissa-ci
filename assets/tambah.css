@@ -10,7 +10,7 @@ h1{
     border-radius: 10px;
     margin-left: 32%;
     border: none;
-    background-color: #8765e4;
+    background-color: #4818cc;
     cursor: pointer;
 }
 .tambah input[type=submit]{
@@ -19,6 +19,6 @@ h1{
     border-radius: 10px;
     margin-left: 32%;
     border: none;
-    background-color: #7549ee;
+    background-color:#4818cc;
     cursor: pointer;
 }
